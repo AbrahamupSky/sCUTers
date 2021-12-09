@@ -1,0 +1,29 @@
+<!-- Button trigger modal -->
+<span class="d-inline text-muted mt-1">¿Olvidaste tu contraseña? Ingresa
+    <button type="button" class="inline-block btn btn btn-link p-0 mb-1" data-bs-toggle="modal" data-bs-target="#recuperar">
+        aquí
+    </button>
+</span>
+
+<!-- Modal -->
+<div class="modal fade" id="recuperar" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Recuperar contraseña</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form action="/recover" method="POST">
+      <div class="modal-body">
+        <label class="form-label">Ingresa tu correo</label>
+        <input type="email" name="email" class="form-control">
+        <div class="form-text">Si el email se encuentra registrado, enviaremos un correo con la contraseña.</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>

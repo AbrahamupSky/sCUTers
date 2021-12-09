@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="css/admin.css">
+{{> cabeceraAdmin}}
+{{> mensajes}}
+{{> menuAdmin}}
+<div class="container-fluid">
+    <form action="/admin/usuario/registro" method="post">
+  <div class="row">
+    <main class="main col-md-9 ms-auto col-lg-10 px-4">
+      <div class="d-flex justify-content-between flex-wrap align-items-center pt-3 pb-2 mb-2 mt-3">
+
+        
+            <div class="col container mt-5">
+                <h3>Registrar Usuario</h3>
+                <br>
+                <div class="form-row">
+
+                  <div class="col-md mb-3">
+                    <label for="nombre">Nombre(s)</label>
+                    <input type="text" class="form-control" name="nombre" placeholder="Nombre" required="true">
+                  </div>
+
+                  <div class="col-md mb-3">
+                    <label for="apellido">Apellido Paterno</label>
+                    <input type="text" class="form-control" name="apellidoP" placeholder="Apellido" required="true">
+                  </div>
+
+                  <div class="col-md mb-3">
+                    <label for="apellido">Apellido Materno</label>
+                    <input type="text" class="form-control" name="apellidoM" placeholder="Apellido" required="true">
+                  </div>
+
+                  <div class="col-md mb-4">
+                    <label for="user">Correo</label>
+                    <input type="email" class="form-control" name="correo" placeholder="Email" required="true">
+                  </div>
+                </div>
+           </div>
+            
+            <div class="col container mt-5">
+
+                <div class="form-row ">
+                  <div class="col-md mb-3">
+                    <label for="nombre">Contraseña</label>
+                    <input type="password" class="form-control" name="password" placeholder="Contraseña" required="true"> 
+                  </div>
+
+                  <div class="col-md mb-3">
+                    <label for="apellido">Repetir Contraseña</label>
+                    <input type="password" class="form-control" name="password2" placeholder="Repetir" required="true">
+                    <small class="form-text text-muted">
+                      El usuario registrado se deshabilitara automaticamente, para <b>habilitar</b> al usuario vaya a la sección de usuario.
+                    </small>
+                  </div>
+
+                  <div class="col-md mb-3 d-grid gap-2">
+                    <button type="submit" class="btn btn-outline-primary" >Crear Usuario</button>
+                  </div>
+            </div>
+            </form>
+
+      </div>
+    </main>
+  </div>
+</div>

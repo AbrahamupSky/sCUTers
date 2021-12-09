@@ -1,0 +1,23 @@
+
+<link rel="stylesheet" href="css/auth.css">
+<div class="text-center" id="principal"> 
+     {{> mensajes}}  
+    <main class="form-signin">
+    <form method="POST" action="/signin">
+        <h1 class="h3 mb-3 fw-normal">💀Sell Point CUT</h1>
+        <div class="form-floating mb-4">
+        <input type="email" class="form-control" name="email" placeholder="name@example.com">
+        <label for="email">Correo Electronico</label>
+        </div>
+        <div class="form-floating mb-4">
+        <input type="password" class="form-control" name="password" placeholder="Password">
+        <label for="password">Contraseña</label>
+        </div>
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Iniciar Sesión </button>
+        
+        <h1>{{user}}</h1>
+    </form>
+    {{>recuperar}}
+    <p class="mt-5 mb-3 text-muted">Creado con <b>amor</b> por los tres Inges👻</p>
+    </main>
+</div>

@@ -1,0 +1,9 @@
+.contMensaje{
+    width: 80%;
+    position: fixed;
+    margin: auto;
+    z-index: 4000;
+    left: 0;
+    right: 0;;
+    top: 8%;
+}

@@ -1,0 +1,69 @@
+
+<link rel="stylesheet" href="css/admin.css">
+{{> cabeceraAdmin}}
+{{> mensajes}}
+{{> menuAdmin}}
+<div class="container-fluid">
+  <div class="row">
+    <main class="main col-md-9 ms-auto col-lg-10 px-4">
+
+      <div class="d-flex justify-content-between flex-wrap align-items-center p-1 mt-5">
+        <h1 class="h2 mt-4">Productos</h1>
+        <div class="btn-toolbar mb-2 mb-md-0">
+          <div class="btn-group mr-2">
+            <small>👻</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="table-responsive">
+        <table class="table table-striped table-sm">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Categoria</th>
+              <th>Cantidad</th>
+              <th>Precio de Compra</th>
+              <th>Precio de Venta</th>
+              <th class="text-center">Actualizar</th>
+              <th class="text-center">Eliminar</th>
+            </tr>
+          </thead>
+          <tbody>
+			{{#each productos}}
+            <tr>
+              <form action="/admin/producto/actualizar/{{idproductos}}" method="post">
+              <td>
+                  <div class="input-group input-group-sm col-auto">
+                    <input type="text" name="nombre" class="form-control border-0 bg-transparent" value="{{nombre_producto}}" required="true">
+                  </div>
+              </td>
+              <td>{{nombre}}</td>
+              <td>
+                  <div class="input-group input-group-sm col-auto">
+                    <input type="text" name="cantidad" class="form-control border-0 bg-transparent" value="{{cantidad}}" required="true">
+                  </div>
+              </td>
+              <td>
+                  <div class="input-group input-group-sm col-auto">
+                    <input type="text" name="precioC" class="form-control border-0 bg-transparent" value="{{precio_compra}}" required="true">
+                  </div>
+              </td>
+              <td>
+                  <div class="input-group input-group-sm col-auto">
+                    <input type="text" name="precioV" class="form-control border-0 bg-transparent" value="{{precio_venta}}" required="true">
+                  </div>
+              </td>
+              <td class="text-center"><button type="submit" class="btn btn-outline-success btn-sm p-1 border-0"><i class="fas fa-save"></i></button></td>
+              </form>
+              <form action="/admin/producto/eliminar/{{idproductos}}" method="post">
+                <td class="text-center"><button class="btn btn-outline-danger btn-sm p-1 border-0"><i class="fas fa-trash"></i></button></td>     
+              </form>
+            </tr>      
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+</div>
