@@ -17,7 +17,7 @@ const app = express();
 require('./lib/passport');
 
 //Configuraciones
-app.set('port', process.env.PORT || 4000);
+app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 app.engine('.hbs', exphbs.engine({
     defaultLayout: 'main',
@@ -63,7 +63,6 @@ app.use((req, res, next) => {
 app.use(require('./routes/index'));
 app.use('/admin', require('./routes/admin'));
 app.use(require('./routes/authentication'));
-app.use('/tienda', require('./routes/tienda'));
 
 //Archivos Publicos
 app.use(express.static(path.join(__dirname, 'public')))

@@ -58,7 +58,7 @@ router.get('/verificar', isLoggedIn, (req, res)=>{
             res.redirect('/logout');
         }
         else{
-            return res.redirect('/tienda');       
+            return res.redirect('/scuter');       
         }
 
         
