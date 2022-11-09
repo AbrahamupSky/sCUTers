@@ -44,7 +44,7 @@ router.post("/recover", async (req, res) => {
 
   // Preview only available when sending through an Ethereal account
   console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
-  // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
+  // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou....
   req.flash('success', "Contraseña Enviada")
     res.redirect('/signin');
 });
