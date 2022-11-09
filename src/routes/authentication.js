@@ -33,7 +33,7 @@ router.post("/recover", async (req, res) => {
 
   // send mail with defined transport object
   let info = await transporter.sendMail({
-    from: '"Los Tres Inges👻"', // sender address
+    from: '"🛴sCUTer"', // sender address
     to: `${email}` , // list of receivers
     subject: "Recuperacion de contraseña", // Subject line
     text: "Tu contraseña es: "+rows[0].contrasena
