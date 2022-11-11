@@ -11,4 +11,9 @@ router.get('/scuter', isLoggedIn, (req, res) => {
     res.render('build/index')
 });
 
+router.get('/pruebas', (req, res) => {
+    res.render('test/index')
+});
+
+
 module.exports = router;
